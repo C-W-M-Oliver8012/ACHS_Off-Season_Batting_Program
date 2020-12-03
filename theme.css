@@ -2,14 +2,19 @@ body
 {
 	text-align: center;
 	margin: auto;
-	max-width: 45em;
-	padding-bottom: 2em;
+	max-width: 95vw;
+	padding: 2vw;
+}
+
+table
+{
+	width: 70vw;
 }
 
 table, th, td
 {
 	margin: auto;
-	margin-bottom: 1em;
+	margin-bottom: 1vh;
 	border: 1px solid black;
 }
 
@@ -52,7 +57,7 @@ th, td
 
 .key
 {
-	max-width: 20em;
+	max-width: 90vw;
 	margin: auto;
 }
 
@@ -65,9 +70,9 @@ button
 {
 	display: block;
 	margin: auto;
-	width: 15em;
-	padding: 1em;
-	margin-top: 1.5em;
+	width: 80vw;
+	padding: 2vh;
+	margin-top: 2vh;
 	background-color: #009999;
 	color: #FFFFFF;
 	border: none;
