@@ -61,7 +61,14 @@ a
 	color: #4D86CA;
 }
 
-li
+button
 {
+	display: block;
+	margin: auto;
+	width: 15em;
 	padding: 1em;
+	margin-top: 1.5em;
+	background-color: #009999;
+	color: #FFFFFF;
+	border: none;
 }
