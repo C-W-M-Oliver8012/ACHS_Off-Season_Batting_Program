@@ -1,0 +1,67 @@
+body 
+{
+	text-align: center;
+	margin: auto;
+	max-width: 40em;
+	padding-bottom: 2em;
+}
+
+table, th, td
+{
+	margin: auto;
+	margin-bottom: 1em;
+	border: 1px solid black;
+}
+
+th, td
+{
+	padding: 0.3em;
+}
+
+.BL
+{
+	background-color: #44E844;
+	opacity: 0.8;
+}
+
+.HL
+{
+	background-color: #E84451;
+	opacity: 0.8;
+}
+
+.U
+{
+	background-color: #44BDE8;
+	opacity: 0.8;
+}
+
+.R
+{
+	background-color: #9F9F9F;
+	opacity: 0.8;
+}
+
+.drill
+{
+	border: 1px solid black;
+	margin-top: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.key
+{
+	max-width: 20em;
+	margin: auto;
+}
+
+a
+{
+	color: #4D86CA;
+}
+
+li
+{
+	padding: 1em;
+}
