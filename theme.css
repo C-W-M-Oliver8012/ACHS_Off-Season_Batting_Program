@@ -61,6 +61,11 @@ th, td
 	margin: auto;
 }
 
+input.check
+{
+	transform: scale(1.5);
+}
+
 a
 {
 	color: #4D86CA;
