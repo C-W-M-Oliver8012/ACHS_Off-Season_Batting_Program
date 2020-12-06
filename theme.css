@@ -67,7 +67,7 @@ th, td
 {
 	display: block;
 	padding: 0.4em;
-	background-color: hsla(5, 100%, 61%, 0.8);
+	background-color: #d04336;
 	color: #162b32;
 	border: none;
 	font-weight: bold;
@@ -75,6 +75,22 @@ th, td
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0.5em;
+	border-radius: 12px;
+}
+
+.back:active
+{
+	display: block;
+	padding: 0.4em;
+	background-color: #a53127;
+	color: #162b32;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5em;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0.5em;
+	border-radius: 12px;
 }
 
 .button
@@ -85,9 +101,26 @@ th, td
 	padding: 0.6em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	background-color: hsla(5, 100%, 61%, 0.8);
+	background-color: #d04336;
 	color: #162b32;
 	border: none;
 	font-weight: bold;
 	font-size: 1.5em;
+	border-radius: 12px;
+}
+
+.button:active
+{
+	display: block;
+	margin: auto;
+	width: 70vw;
+	padding: 0.6em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: #a53127;
+	color: #162b32;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5em;
+	border-radius: 12px;
 }
