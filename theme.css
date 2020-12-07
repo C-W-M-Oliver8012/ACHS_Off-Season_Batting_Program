@@ -26,9 +26,17 @@ a
 	color: #4D86CA;
 }
 
+.table_container
+{
+	display: block;
+	margin: auto;
+	width: 70vw;
+	max-width: 5in;
+}
+
 table
 {
-	width: 70vw;
+	width: 100%;
 }
 
 table, th, td
@@ -36,7 +44,6 @@ table, th, td
 	margin: auto;
 	border: 1px solid white;
 	border-collapse: collapse;
-	max-width: 5in;
 }
 
 th, td
