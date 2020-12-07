@@ -36,6 +36,7 @@ table, th, td
 	margin: auto;
 	border: 1px solid white;
 	border-collapse: collapse;
+	max-width: 5in;
 }
 
 th, td
@@ -46,21 +47,33 @@ th, td
 .BL
 {
 	background-color: hsla(120, 78%, 40%, 0.6);
+	max-width: 5in;
+	margin: auto;
+	margin-top: 0.5em;
 }
 
 .HL
 {
 	background-color: hsla(355, 78%, 59%, 0.6);
+	max-width: 5in;
+	margin: auto;
+	margin-top: 0.5em;
 }
 
 .U
 {
 	background-color: hsla(196, 78%, 59%, 0.6);
+	max-width: 5in;
+	margin: auto;
+	margin-top: 0.5em;
 }
 
 .R
 {
 	background-color: hsla(0, 0%, 62%, 0.6);
+	max-width: 5in;
+	margin: auto;
+	margin-top: 0.5em;
 }
 
 .back
@@ -107,6 +120,7 @@ th, td
 	font-weight: bold;
 	font-size: 1.5em;
 	border-radius: 12px;
+	max-width: 5in;
 }
 
 .button:active
@@ -123,4 +137,5 @@ th, td
 	font-weight: bold;
 	font-size: 1.5em;
 	border-radius: 12px;
+	max-width: 5in;
 }
