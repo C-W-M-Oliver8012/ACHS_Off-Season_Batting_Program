@@ -2,6 +2,7 @@ createHomePage ();
 
 function createHomePage ()
 {
+	scroll (0, 0);
 	createH1Tag ("ACHS Off-Season Batting Program");
 	createButton ("Tutorials");
 	createButton ("Week 1");
@@ -26,6 +27,7 @@ function deleteHomePage ()
 
 function createTutorialsPage ()
 {
+	scroll (0, 0);
 	createTutorialsBackButton ();
 	createH1Tag ("Tutorials");
 	createLink ("Walk Through Drill", "https://www.youtube.com/watch?v=9BsRj3u5HQs&amp%3Blist=PLGSlrSk6rBqJln7y04FOQ_mkJuTyAGlcl&amp%3Bindex=3");
@@ -77,6 +79,7 @@ function deleteTutorialsPage ()
 
 function createWorkoutPage (week)
 {
+	scroll (0, 0);
 	createWorkoutBackButton (week);
 	createH1Tag (week.title);
 	createH2Tag (week.description);
