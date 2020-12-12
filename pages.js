@@ -1,9 +1,13 @@
+let numClicked = 0;
+let hasBeenInc = false;
+
 createHomePage ();
 
 function createHomePage ()
 {
 	scroll (0, 0);
 	createH1Tag ("ACHS Off-Season Batting Program");
+	createButton ("Editor");
 	createButton ("Tutorials");
 	createButton ("Week 1");
 	createButton ("Week 2");
@@ -11,11 +15,16 @@ function createHomePage ()
 	createButton ("Week 4");
 	createButton ("Week 5");
 	createButton ("Week 6");
+	createButton ("Week 7");
+	createButton ("Week 8");
+	numClicked = 0;
+	hasBeenInc = false;
 }
 
 function deleteHomePage ()
 {
 	document.getElementById ("ACHS Off-Season Batting Program").remove ();
+	document.getElementById ("Editor").remove ();
 	document.getElementById ("Tutorials").remove ();
 	document.getElementById ("Week 1").remove ();
 	document.getElementById ("Week 2").remove ();
@@ -23,6 +32,65 @@ function deleteHomePage ()
 	document.getElementById ("Week 4").remove ();
 	document.getElementById ("Week 5").remove ();
 	document.getElementById ("Week 6").remove ();
+	document.getElementById ("Week 7").remove ();
+	document.getElementById ("Week 8").remove ();
+}
+
+function createTimesCompletedEditor ()
+{
+	createEditorBackButton ();
+	createH1Tag ("Times Completed Editor");
+
+	let hr = document.createElement ("hr");
+	hr.id = "hr";
+	document.body.appendChild (hr);
+
+	for (let i = 1; i < 9; i++)
+	{
+		createH2Tag ("Week " + i);
+		let input = document.createElement ("input");
+		input.id = "input" + i;
+		input.type = "number";
+		input.value = localStorage.getItem ("Week " + i);
+		document.body.appendChild (input);
+
+		let hr = document.createElement ("hr");
+		hr.id = "hr" + i;
+		document.body.appendChild (hr);
+	}
+
+	let button = document.createElement ("button");
+	button.className = "button";
+	let text = document.createTextNode ("Submit");
+	button.id = "submitButton";
+	button.appendChild (text);
+	button.addEventListener ("click", function () {
+		for (let i = 1; i < 9; i++)
+		{
+			let input = document.getElementById ("input" + i);
+			localStorage.setItem ("Week " + i, input.value);
+		}
+
+		window.alert ("Submitted!");
+	});
+
+	document.body.appendChild (button);
+}
+
+function deleteTimesCompletedEditor ()
+{
+	document.getElementById ("back").remove ();
+	document.getElementById ("Times Completed Editor").remove ();
+	document.getElementById ("hr").remove ();
+
+	for (let i = 1; i < 9; i++)
+	{
+		document.getElementById ("Week " + i).remove ();
+		document.getElementById ("input" + i).remove ();
+		document.getElementById ("hr" + i).remove ();
+	}
+
+	document.getElementById ("submitButton").remove ();
 }
 
 function createTutorialsPage ()
@@ -113,6 +181,45 @@ function createWorkoutPage (week)
 		row.insertCell (3).innerHTML = week[i].R;
 		table_container.appendChild (table);
 		document.body.appendChild (table_container);
+
+		let label = document.createElement ("label");
+		label.id = "label" + i;
+		label.className = "switch";
+		let input = document.createElement ("input");
+		input.type = "checkbox";
+		input.addEventListener ("change", function () {
+			if (input.checked === true && hasBeenInc === false)
+			{
+				numClicked++;
+			}
+			else if (input.checked === false && hasBeenInc === false)
+			{
+				numClicked--
+			}
+
+			if (numClicked === week.length && hasBeenInc === false)
+			{
+				hasBeenInc = true;
+				window.alert ("Completed!");
+
+				for (let i = 1; i < 9; i++)
+				{
+					if (week.title === "Week " + i)
+					{
+						let num = localStorage.getItem ("Week " + i);
+						num++;
+						localStorage.setItem ("Week " + i, num);
+					}
+				}
+			}
+		});
+		let span = document.createElement ("span");
+		span.className = "slider";
+
+		label.appendChild (input);
+		label.appendChild (span);
+		document.body.appendChild (label);
+
 		let hr = document.createElement ("hr");
 		hr.id = "hr" + i;
 		document.body.appendChild (hr);
@@ -129,6 +236,7 @@ function deleteWorkoutPage (week)
 	{
 		document.getElementById (week[i].name).remove ();
 		document.getElementById ("table_container" + i).remove ();
+		document.getElementById ("label" + i). remove ();
 		document.getElementById ("hr" + i).remove ();
 	}
 }

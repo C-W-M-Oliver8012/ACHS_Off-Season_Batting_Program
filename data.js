@@ -63,3 +63,27 @@ week6.push ({name: "FRONT TOSS - Underhand Toss inside", BL: "4 (300G)", HL: "4 
 week6.push ({name: "FRONT TOSS - Underhand Toss middle", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
 week6.title = "Week 6";
 week6.description = "Goal: 3 - 4 days, 104 swings a day";
+
+let week7 = [];
+week7.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week7.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week7.push ({name: "TEE - Shuffle Swings", BL: "3", HL: "3", U: "3", R: "3"});
+week7.push ({name: "TEE - Tee set up away", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
+week7.push ({name: "TEE - Tee set up middle", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
+week7.push ({name: "FRONT TOSS - Underhand Toss away", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
+week7.push ({name: "FRONT TOSS - Underhand Toss inside", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
+week7.push ({name: "FRONT TOSS - Underhand Toss middle", BL: "4 (300G)", HL: "4 (250G)", U: "4 (200G)", R: "4 (350G)"});
+week7.title = "Week 7";
+week7.description = "Goal: 3 - 4 days, 116 swings a day";
+
+let week8 = [];
+week8.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week8.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week8.push ({name: "TEE - Shuffle Swings", BL: "3", HL: "3", U: "3", R: "3 (200G)"});
+week8.push ({name: "TEE - Tee set up middle", BL: "4 (350G)", HL: "4 (300G)", U: "4 (200G)", R: "4"});
+week8.push ({name: "FRONT TOSS - Underhand Toss middle", BL: "4 (350G)", HL: "4 (300G)", U: "4 (200G)", R: "4"});
+week8.push ({name: "FRONT TOSS - Underhand Toss middle", BL: "4 (350G)", HL: "4 (300G)", U: "4 (200G)", R: "4"});
+week8.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4", HL: "4", U: "4", R: "4 (200G)"});
+week8.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4", HL: "4", U: "4", R: "4 (200G)"});
+week8.title = "Week 8";
+week8.description = "Goal: 3 - 5 days, 120 swings a day";

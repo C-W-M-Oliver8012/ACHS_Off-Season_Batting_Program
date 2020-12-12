@@ -35,7 +35,37 @@ function createButton (textString)
 	button.className = "button";
 	let text = document.createTextNode (textString);
 	button.appendChild (text);
-	if (textString === "Tutorials")
+
+	if (textString != "Tutorials" && textString != "Times Completed Editor")
+	{
+		for (let i = 1; i < 9; i++)
+		{
+			if (textString === "Week " + i)
+			{
+				if (localStorage.getItem ("Week " + i))
+				{
+					let br = document.createElement ("br");
+					let timesCompleted = document.createTextNode ("Times Completed: " + localStorage.getItem ("Week " + i));
+					button.appendChild (br);
+					button.appendChild (timesCompleted);
+				}
+				else
+				{
+					let br = document.createElement ("br");
+					localStorage.setItem ("Week " + i, 0);
+					let timesCompleted = document.createTextNode ("Times Completed: " + localStorage.getItem ("Week " + i));
+					button.appendChild (br);
+					button.appendChild (timesCompleted);
+				}
+			}
+		}
+	}
+
+	if (textString === "Editor")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createTimesCompletedEditor (); });
+	}
+	else if (textString === "Tutorials")
 	{
 		button.addEventListener ("click", function (){ deleteHomePage (); createTutorialsPage (); });
 	}
@@ -63,6 +93,14 @@ function createButton (textString)
 	{
 		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week6); });
 	}
+	else if (textString === "Week 7")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week7); });
+	}
+	else if (textString === "Week 8")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week8); });
+	}
 
 	document.body.appendChild (button);
 }
@@ -86,5 +124,16 @@ function createTutorialsBackButton ()
 	let text = document.createTextNode ("Back");
 	button.appendChild (text);
 	button.addEventListener ("click", function (){ deleteTutorialsPage (); createHomePage (); });
+	document.body.appendChild (button);
+}
+
+function createEditorBackButton ()
+{
+	let button = document.createElement ("button");
+	button.id = "back";
+	button.className = "back";
+	let text = document.createTextNode ("Back");
+	button.appendChild (text);
+	button.addEventListener ("click", function (){ deleteTimesCompletedEditor (); createHomePage (); });
 	document.body.appendChild (button);
 }
