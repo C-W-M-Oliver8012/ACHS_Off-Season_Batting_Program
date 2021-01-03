@@ -211,7 +211,7 @@ function createWorkoutPage (week)
 				hasBeenInc = true;
 				window.alert ("Completed!");
 
-				for (let i = 1; i < 9; i++)
+				for (let i = 1; i < 13; i++)
 				{
 					if (week.title === "Week " + i)
 					{
