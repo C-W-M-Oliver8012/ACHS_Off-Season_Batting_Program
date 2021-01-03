@@ -46,6 +46,7 @@ function deleteHomePage ()
 
 function createTimesCompletedEditor ()
 {
+	scroll (0, 0);
 	createEditorBackButton ();
 	createH1Tag ("Times Completed Editor");
 
