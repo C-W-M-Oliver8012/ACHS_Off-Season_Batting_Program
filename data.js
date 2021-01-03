@@ -87,3 +87,51 @@ week8.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4", HL: "4", U: "4"
 week8.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4", HL: "4", U: "4", R: "4 (200G)"});
 week8.title = "Week 8";
 week8.description = "Goal: 3 - 5 days, 120 swings a day";
+
+let week9 = [];
+week9.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week9.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week9.push ({name: "TEE - Shuffle Swings", BL: "4 (200G)", HL: "4", U: "4", R: "4 (250G)"});
+week9.push ({name: "TEE - Tee set up middle", BL: "4 (350G)", HL: "4 (300G)", U: "4 (200G)", R: "4"});
+week9.push ({name: "FRONT TOSS - Underhand Toss middle", BL: "4 (350G)", HL: "4 (300G)", U: "4 (200G)", R: "4"});
+week9.push ({name: "FRONT TOSS - Underhand Adjustability Toss", BL: "4 (300G)", HL: "4", U: "4", R: "4 (200G)"});
+week9.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4 (200G)", HL: "4", U: "4", R: "4 (250G)"});
+week9.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "4 (200G)", HL: "4", U: "4", R: "4 (250G)"});
+week9.title = "Week 9";
+week9.description = "Goal: 3 - 5 days, 120 swings a day";
+
+let week10 = [];
+week10.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week10.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week10.push ({name: "TEE - Shuffle Swings", BL: "5 (300G)", HL: "5 (200G)", U: "5", R: "5 (250G)"});
+week10.push ({name: "TEE - Tee set up middle", BL: "5 (350G)", HL: "5 (300G)", U: "5 (200G)", R: "5"});
+week10.push ({name: "FRONT TOSS - Underhand Adjustability Toss", BL: "5 (300G)", HL: "5 (200G)", U: "5", R: "5 (250G)"});
+week10.push ({name: "FRONT TOSS - Underhand Adjustability Toss", BL: "5 (300G)", HL: "5 (200G)", U: "5", R: "5 (250G)"});
+week10.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "5 (200G)", HL: "5", U: "5", R: "5 (250G)"});
+week10.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "5 (200G)", HL: "5", U: "5", R: "5 (250G)"});
+week10.title = "Week 10";
+week10.description = "Goal: 3 - 5 days, 144 swings a day";
+
+let week11 = [];
+week11.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week11.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week11.push ({name: "TEE - Shuffle Swings", BL: "5 (350G)", HL: "5 (300G)", U: "5", R: "5 (250G)"});
+week11.push ({name: "TEE - Tee set up middle", BL: "5 (350G)", HL: "5 (300G)", U: "5 (200G)", R: "5"});
+week11.push ({name: "FRONT TOSS - Underhand Adjustability Toss", BL: "5 (300G)", HL: "5 (250G)", U: "5", R: "5 (350G)"});
+week11.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "5 (300G)", HL: "5 (200G)", U: "5", R: "5 (250G)"});
+week11.push ({name: "FRONT TOSS - Overhand Approach Toss", BL: "5", HL: "5", U: "5", R: "5"});
+week11.push ({name: "FRONT TOSS - Overhand Approach Toss", BL: "5", HL: "5", U: "5", R: "5"});
+week11.title = "Week 11";
+week11.description = "Goal: 3 - 5 days, 144 swings a day";
+
+let week12 = [];
+week12.push ({name: "TEE - Walk Through Drill", BL: "3", HL: "3", U: "3", R: "3"});
+week12.push ({name: "TEE - Rocker Drill", BL: "3 (300G)", HL: "3 (250G)", U: "3 (200G)", R: "3 (350G)"});
+week12.push ({name: "TEE - Shuffle Swings", BL: "5 (350G)", HL: "5 (300G)", U: "5", R: "5 (250G)"});
+week12.push ({name: "TEE - Tee set up middle", BL: "5 (350G)", HL: "5 (300G)", U: "5 (200G)", R: "5"});
+week12.push ({name: "FRONT TOSS - Overhand Toss middle", BL: "5 (300G)", HL: "5 (200G)", U: "5", R: "5 (250G)"});
+week12.push ({name: "FRONT TOSS - Overhand Approach Toss", BL: "5", HL: "5", U: "5", R: "5"});
+week12.push ({name: "FRONT TOSS - Overhand Approach Toss", BL: "5", HL: "5", U: "5", R: "5"});
+week12.push ({name: "FRONT TOSS - Overhand Approach Toss", BL: "5", HL: "5", U: "5", R: "5"});
+week12.title = "Week 12";
+week12.description = "Goal: 3 - 5 days, 144 swings a day";

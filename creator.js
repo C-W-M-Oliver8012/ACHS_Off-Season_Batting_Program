@@ -38,7 +38,7 @@ function createButton (textString)
 
 	if (textString != "Tutorials" && textString != "Times Completed Editor")
 	{
-		for (let i = 1; i < 9; i++)
+		for (let i = 1; i < 13; i++)
 		{
 			if (textString === "Week " + i)
 			{
@@ -100,6 +100,22 @@ function createButton (textString)
 	else if (textString === "Week 8")
 	{
 		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week8); });
+	}
+	else if (textString === "Week 9")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week9); });
+	}
+	else if (textString === "Week 10")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week10); });
+	}
+	else if (textString === "Week 11")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week11); });
+	}
+	else if (textString === "Week 12")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createWorkoutPage (week12); });
 	}
 
 	document.body.appendChild (button);

@@ -17,6 +17,10 @@ function createHomePage ()
 	createButton ("Week 6");
 	createButton ("Week 7");
 	createButton ("Week 8");
+	createButton ("Week 9");
+	createButton ("Week 10");
+	createButton ("Week 11");
+	createButton ("Week 12");
 	numClicked = 0;
 	hasBeenInc = false;
 }
@@ -34,6 +38,10 @@ function deleteHomePage ()
 	document.getElementById ("Week 6").remove ();
 	document.getElementById ("Week 7").remove ();
 	document.getElementById ("Week 8").remove ();
+	document.getElementById ("Week 9").remove ();
+	document.getElementById ("Week 10").remove ();
+	document.getElementById ("Week 11").remove ();
+	document.getElementById ("Week 12").remove ();
 }
 
 function createTimesCompletedEditor ()
@@ -45,7 +53,7 @@ function createTimesCompletedEditor ()
 	hr.id = "hr";
 	document.body.appendChild (hr);
 
-	for (let i = 1; i < 9; i++)
+	for (let i = 1; i < 13; i++)
 	{
 		createH2Tag ("Week " + i);
 		let input = document.createElement ("input");
@@ -65,7 +73,7 @@ function createTimesCompletedEditor ()
 	button.id = "submitButton";
 	button.appendChild (text);
 	button.addEventListener ("click", function () {
-		for (let i = 1; i < 9; i++)
+		for (let i = 1; i < 13; i++)
 		{
 			let input = document.getElementById ("input" + i);
 			localStorage.setItem ("Week " + i, input.value);
@@ -83,7 +91,7 @@ function deleteTimesCompletedEditor ()
 	document.getElementById ("Times Completed Editor").remove ();
 	document.getElementById ("hr").remove ();
 
-	for (let i = 1; i < 9; i++)
+	for (let i = 1; i < 13; i++)
 	{
 		document.getElementById ("Week " + i).remove ();
 		document.getElementById ("input" + i).remove ();
