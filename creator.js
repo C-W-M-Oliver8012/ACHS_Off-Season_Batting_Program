@@ -61,7 +61,11 @@ function createButton (textString)
 		}
 	}
 
-	if (textString === "Editor")
+	if (textString === "Velocity Tracker")
+	{
+		button.addEventListener ("click", function (){ deleteHomePage (); createVelocityTrackerPage () });
+	}
+	else if (textString === "Editor")
 	{
 		button.addEventListener ("click", function (){ deleteHomePage (); createTimesCompletedEditor (); });
 	}
@@ -151,5 +155,16 @@ function createEditorBackButton ()
 	let text = document.createTextNode ("Back");
 	button.appendChild (text);
 	button.addEventListener ("click", function (){ deleteTimesCompletedEditor (); createHomePage (); });
+	document.body.appendChild (button);
+}
+
+function createVelocityBackButton ()
+{
+	let button = document.createElement ("button");
+	button.id = "back";
+	button.className = "back";
+	let text = document.createTextNode ("Back");
+	button.appendChild (text);
+	button.addEventListener ("click", function (){ deleteVelocityTrackerPage (); createHomePage (); });
 	document.body.appendChild (button);
 }

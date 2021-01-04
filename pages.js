@@ -7,6 +7,7 @@ function createHomePage ()
 {
 	scroll (0, 0);
 	createH1Tag ("ACHS Off-Season Batting Program");
+	createButton ("Velocity Tracker");
 	createButton ("Editor");
 	createButton ("Tutorials");
 	createButton ("Week 1");
@@ -28,6 +29,7 @@ function createHomePage ()
 function deleteHomePage ()
 {
 	document.getElementById ("ACHS Off-Season Batting Program").remove ();
+	document.getElementById ("Velocity Tracker").remove ();
 	document.getElementById ("Editor").remove ();
 	document.getElementById ("Tutorials").remove ();
 	document.getElementById ("Week 1").remove ();
@@ -42,6 +44,208 @@ function deleteHomePage ()
 	document.getElementById ("Week 10").remove ();
 	document.getElementById ("Week 11").remove ();
 	document.getElementById ("Week 12").remove ();
+}
+
+function createVelocityTrackerPage ()
+{
+	scroll(0, 0);
+	createVelocityBackButton ();
+	createH1Tag ("Velocity Tracker");
+
+	let select = document.createElement ("select");
+	select.id = "Week Selection";
+	select.name = "weeks";
+
+	document.body.appendChild (select);
+	let weekNum = document.createElement ("h1");
+	weekNum.id = "WeekNum";
+	weekNum.innerHTML = "Week 1";
+	document.body.appendChild (weekNum);
+
+	createH2Tag ("BL Bat Velocities");
+	for (let i = 0; i < 5; i++)
+	{
+		let input = document.createElement ("input");
+		input.id = "BL" + i;
+		input.type = "number";
+		if (localStorage.getItem (weekNum.innerHTML + input.id))
+		{
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		else 
+		{
+			localStorage.setItem (weekNum.innerHTML + input.id, 0);
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		document.body.appendChild (input);
+	}
+
+	createH2Tag ("HL Bat Velocities");
+	for (let i = 0; i < 5; i++)
+	{
+		let input = document.createElement ("input");
+		input.id = "HL" + i;
+		input.type = "number";
+		if (localStorage.getItem (weekNum.innerHTML + input.id))
+		{
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		else 
+		{
+			localStorage.setItem (weekNum.innerHTML + input.id, 0);
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		document.body.appendChild (input);
+	}
+
+	createH2Tag ("U Bat Velocities");
+	for (let i = 0; i < 5; i++)
+	{
+		let input = document.createElement ("input");
+		input.id = "U" + i;
+		input.type = "number";
+		if (localStorage.getItem (weekNum.innerHTML + input.id))
+		{
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		else 
+		{
+			localStorage.setItem (weekNum.innerHTML + input.id, 0);
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		document.body.appendChild (input);
+	}
+
+	createH2Tag ("R Bat Velocities");
+	for (let i = 0; i < 5; i++)
+	{
+		let input = document.createElement ("input");
+		input.id = "R" + i;
+		input.type = "number";
+		if (localStorage.getItem (weekNum.innerHTML + input.id))
+		{
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		else 
+		{
+			localStorage.setItem (weekNum.innerHTML + input.id, 0);
+			input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+		}
+		document.body.appendChild (input);
+	}
+
+	for (let i = 1; i < 13; i++) 
+	{
+		let option = document.createElement ("option");
+		option.id = "Week " + i;
+		option.value = "Week " + i;
+		option.innerHTML = "Week " + i;
+
+		option.addEventListener("click", function (){
+			document.getElementById ("WeekNum").innerHTML = option.id;
+
+			for (let i = 0; i < 5; i++)
+			{
+				let input = document.getElementById ("BL" + i);
+				if (localStorage.getItem (weekNum.innerHTML + input.id))
+				{
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+				else 
+				{
+					localStorage.setItem (weekNum.innerHTML + input.id, 0);
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+			}
+
+			for (let i = 0; i < 5; i++)
+			{
+				let input = document.getElementById ("HL" + i);
+				if (localStorage.getItem (weekNum.innerHTML + input.id))
+				{
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+				else 
+				{
+					localStorage.setItem (weekNum.innerHTML + input.id, 0);
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+			}
+
+			for (let i = 0; i < 5; i++)
+			{
+				let input = document.getElementById ("U" + i);
+				if (localStorage.getItem (weekNum.innerHTML + input.id))
+				{
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+				else 
+				{
+					localStorage.setItem (weekNum.innerHTML + input.id, 0);
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+			}
+
+			for (let i = 0; i < 5; i++)
+			{
+				let input = document.getElementById ("R" + i);
+				if (localStorage.getItem (weekNum.innerHTML + input.id))
+				{
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+				else 
+				{
+					localStorage.setItem (weekNum.innerHTML + input.id, 0);
+					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+				}
+			}
+		})
+
+		select.appendChild (option);
+	}
+
+	let submit = document.createElement ("button");
+	submit.id = "submit";
+	submit.className = "button";
+	submit.innerHTML = "Submit";
+	submit.addEventListener ("click", function () {
+		for (let i = 0; i < 5; i++)
+		{
+			let input1 = document.getElementById ("BL" + i);
+			let input2 = document.getElementById ("HL" + i);
+			let input3 = document.getElementById ("U" + i);
+			let input4 = document.getElementById ("R" + i);
+			localStorage.setItem (weekNum.innerHTML + input1.id, input1.value);
+			localStorage.setItem (weekNum.innerHTML + input2.id, input2.value);
+			localStorage.setItem (weekNum.innerHTML + input3.id, input3.value);
+			localStorage.setItem (weekNum.innerHTML + input4.id, input4.value);
+		}
+		window.alert("Submitted!");
+	})
+
+	document.body.appendChild (submit);
+}
+
+function deleteVelocityTrackerPage ()
+{
+	document.getElementById ("back").remove ();
+	document.getElementById ("Velocity Tracker").remove ();
+	document.getElementById ("Week Selection"). remove ();
+	document.getElementById ("WeekNum").remove ();
+	document.getElementById ("BL Bat Velocities").remove ();
+	document.getElementById ("HL Bat Velocities").remove ();
+	document.getElementById ("U Bat Velocities").remove ();
+	document.getElementById ("R Bat Velocities").remove ();
+
+	for (let i = 0; i < 5; i++)
+	{
+		document.getElementById ("BL" + i).remove ();
+		document.getElementById ("HL" + i).remove ();
+		document.getElementById ("U" + i).remove ();
+		document.getElementById ("R" + i).remove ();
+	}
+
+	document.getElementById ("submit").remove ();
 }
 
 function createTimesCompletedEditor ()
