@@ -56,6 +56,66 @@ function createVelocityTrackerPage ()
 	select.id = "Week Selection";
 	select.name = "weeks";
 
+	select.addEventListener("change", function (){
+		document.getElementById ("WeekNum").innerHTML = select.value;
+		
+		for (let i = 0; i < 5; i++)
+		{
+			let input = document.getElementById ("BL" + i);
+			if (localStorage.getItem (weekNum.innerHTML + input.id))
+			{
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+			else 
+			{
+				localStorage.setItem (weekNum.innerHTML + input.id, 0);
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+		}
+
+		for (let i = 0; i < 5; i++)
+		{
+			let input = document.getElementById ("HL" + i);
+			if (localStorage.getItem (weekNum.innerHTML + input.id))
+			{
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+			else 
+			{
+				localStorage.setItem (weekNum.innerHTML + input.id, 0);
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+		}
+
+		for (let i = 0; i < 5; i++)
+		{
+			let input = document.getElementById ("U" + i);
+			if (localStorage.getItem (weekNum.innerHTML + input.id))
+			{
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+			else 
+			{
+				localStorage.setItem (weekNum.innerHTML + input.id, 0);
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+		}
+
+		for (let i = 0; i < 5; i++)
+		{
+			let input = document.getElementById ("R" + i);
+			if (localStorage.getItem (weekNum.innerHTML + input.id))
+			{
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+			else 
+			{
+				localStorage.setItem (weekNum.innerHTML + input.id, 0);
+				input.value = localStorage.getItem (weekNum.innerHTML + input.id);
+			}
+		}
+	})
+
 	document.body.appendChild (select);
 	let weekNum = document.createElement ("h1");
 	weekNum.id = "WeekNum";
@@ -140,66 +200,6 @@ function createVelocityTrackerPage ()
 		option.id = "Week " + i;
 		option.value = "Week " + i;
 		option.innerHTML = "Week " + i;
-
-		option.addEventListener("click", function (){
-			document.getElementById ("WeekNum").innerHTML = option.id;
-
-			for (let i = 0; i < 5; i++)
-			{
-				let input = document.getElementById ("BL" + i);
-				if (localStorage.getItem (weekNum.innerHTML + input.id))
-				{
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-				else 
-				{
-					localStorage.setItem (weekNum.innerHTML + input.id, 0);
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-			}
-
-			for (let i = 0; i < 5; i++)
-			{
-				let input = document.getElementById ("HL" + i);
-				if (localStorage.getItem (weekNum.innerHTML + input.id))
-				{
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-				else 
-				{
-					localStorage.setItem (weekNum.innerHTML + input.id, 0);
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-			}
-
-			for (let i = 0; i < 5; i++)
-			{
-				let input = document.getElementById ("U" + i);
-				if (localStorage.getItem (weekNum.innerHTML + input.id))
-				{
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-				else 
-				{
-					localStorage.setItem (weekNum.innerHTML + input.id, 0);
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-			}
-
-			for (let i = 0; i < 5; i++)
-			{
-				let input = document.getElementById ("R" + i);
-				if (localStorage.getItem (weekNum.innerHTML + input.id))
-				{
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-				else 
-				{
-					localStorage.setItem (weekNum.innerHTML + input.id, 0);
-					input.value = localStorage.getItem (weekNum.innerHTML + input.id);
-				}
-			}
-		})
 
 		select.appendChild (option);
 	}
