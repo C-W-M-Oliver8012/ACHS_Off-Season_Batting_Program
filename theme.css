@@ -149,7 +149,10 @@ th, td
 
 input
 {
-	margin: 0.2em;
+	display: block;
+	margin: auto;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
 }
 
 
